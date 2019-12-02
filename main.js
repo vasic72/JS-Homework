@@ -1,14 +1,112 @@
-var Peter = 3500;
-var Jim = 5000;
-console.log(Peter > Jim);
+// TASK 1:
+// Create a function that should receive an array,
+// and return an array in reverse order. Result should be stored in a variable
 
-var John = 38;
-var Mike = ((38 + 8)/2)-8;
-console.log("Mike is " + Mike + " years old.");
+function reversedArray (inputArray) {
+  var resultArray = [];
+  for (var i=0; i<inputArray.length; i++) {
+    resultArray[i] = inputArray[inputArray.length - i - 1];  
+  };
+  return resultArray;
+};
 
-var firstFlock = 78;
-var secondFlock = 57;
-firstFlock -= 12;
-secondFlock += 12;
-secondFlock -= 4;
-console.log(firstFlock >= secondFlock);
+numbers = [1, 3, 7, 14, 45];
+
+console.log("TASK 1");
+console.log("Initial arrey: " + numbers);
+console.log("Reversed arrey: " + reversedArray (numbers));
+
+// TASK 2: 
+// Create a function that should receive parameter
+// of any type, and console log the type of received data
+
+function printType (x) {
+  console.log(typeof(x));
+}
+
+console.log("TASK 2");
+
+printType(5);
+printType("55");
+printType(true);
+printType([5, 7]);
+
+// TASK 3: 
+// Create a function that should receive an array of at least five
+// names, and return the length of the longest name in the array.
+// Result should be stored in a variable
+
+console.log("TASK 3");
+function longestName (names) {
+  var maxNameLength = names[0].length;
+  for (var i=1; i<names.length; i++) {
+    if (names[i].length > maxNameLength) {
+      maxNameLength = names[i].length;
+    }
+  }
+  return maxNameLength;
+}
+
+allNames = ["Bob", "John", "Nenad", "Baltazar", "Mike"];
+console.log(allNames);
+console.log("Longest name has " + longestName(allNames) + " letters");
+
+// TASK 4: 
+// Create a function that should receive an array of numbers,
+// find the second lowest and second greatest number, 
+// and console log result
+
+
+console.log("TASK 4");
+function SecondMinMax (numbers) {
+  var temp;
+  for (var i=0; i<numbers.length; i++) {
+    for (var j=1; j<(numbers.length-i); j++) {  
+      if (numbers[j-1] > numbers[j]){   
+         temp = numbers[j-1];  
+         numbers[j-1] = numbers[j];  
+         numbers[j] = temp; 
+      } 
+    }
+  }
+  console.log("Second lowest: " + numbers[1]);
+  console.log("Second greatest: " + numbers[numbers.length-1]);
+}
+
+inputArray = [1, 4, 7, 2, 5];
+console.log(inputArray)
+SecondMinMax(inputArray);
+
+// TASK 5:
+// Create two functions. First one should receive two parameters,
+// an array of numbers, and a single number.
+// Then it should call the second function,
+// and pass the same array and number into it.
+// The second function should, based on an array and number provided,
+// find all numbers in an array which are bigger then a provided number,
+// and create an array of those numbers. Then it should console log result.
+
+console.log("TASK 5");
+
+function firstFunction (arrayOfNumbers, number) {
+  secondFunction (arrayOfNumbers, number);
+};
+
+function secondFunction (secondArrayOfNumbers, secondNumber) {
+  var resultArray = [];
+  var resultIndex = 0;
+  for (var i=0; i<secondArrayOfNumbers.length; i++) {
+    if (secondArrayOfNumbers[i] > secondNumber) {
+      resultArray[resultIndex] = secondArrayOfNumbers[i];
+      resultIndex += 1;
+    };
+  };
+  console.log("Bigger then " + secondNumber + ": " + resultArray);
+  return resultArray;
+};
+
+inputArray = [1, 3, 6, 7, 9, 12, 17, 23];
+refNumber = 8;
+console.log(inputArray, "Ref. Number: " + refNumber)
+
+firstFunction(inputArray, refNumber);
