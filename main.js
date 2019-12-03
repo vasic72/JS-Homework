@@ -149,7 +149,7 @@ function makeProduct (lowest, highest) {
   console.log("Product is: " + result);
 }
 
-secondArray = [2, 3, 4, 5, 6, 7,];
 firstArray = [100, 20, 30, 40];
+secondArray = [2, 3, 4, 5, 6, 7,];
 
 makeProduct (findLowest(firstArray), findHighest(secondArray));
