@@ -70,7 +70,7 @@ function SecondMinMax (numbers) {
     }
   }
   console.log("Second lowest: " + numbers[1]);
-  console.log("Second greatest: " + numbers[numbers.length-1]);
+  console.log("Second greatest: " + numbers[numbers.length-2]);
 }
 
 inputArray = [1, 4, 7, 2, 5];
