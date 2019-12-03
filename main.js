@@ -110,3 +110,46 @@ refNumber = 8;
 console.log(inputArray, "Ref. Number: " + refNumber)
 
 firstFunction(inputArray, refNumber);
+
+// TASK 6:
+// Create three functions. 
+// First one should receive an array and return the lowest number in the array.
+// Second one should receive an array and return the highest number if an array.
+// Third function should receive first two functions, and should multiply
+// the result of the first function with the result of the second function.
+// Then it should console log the result.
+
+console.log("TASK 6");
+function findLowest (numbers) {
+  var lowest = numbers[0];
+  for (var i=1; i<numbers.length; i++) {
+    if (numbers[i] < lowest) { 
+      lowest = numbers[i];
+    }
+  }
+  console.log(numbers);
+  console.log("Lowest is: " + lowest);
+  return lowest;
+}
+
+function findHighest (numbers) {
+  var highest = numbers[0];
+  for (var i=1; i<numbers.length; i++) {
+    if (numbers[i] > highest) {
+      highest = numbers[i];
+    }
+  }
+  console.log(numbers);
+  console.log("Highest is: " + highest);
+  return highest;
+}
+
+function makeProduct (lowest, highest) {
+  result = lowest * highest;
+  console.log("Product is: " + result);
+}
+
+secondArray = [2, 3, 4, 5, 6, 7,];
+firstArray = [100, 20, 30, 40];
+
+makeProduct (findLowest(firstArray), findHighest(secondArray));
