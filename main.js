@@ -52,7 +52,7 @@ makeProduct (findLowest(firstArray), findHighest(secondArray));
 //It should then delete the biggest number in the array, and console log the result (array).
 
 var initialArray = [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64];
-console.log("TASK 6");
+console.log("TASK 7");
 console.log("Initial Array: ");
 console.log(initialArray);
 
@@ -60,7 +60,7 @@ function findUnique (arrNumbers, secondFunction) {
 	var uniqueArray = [];
 	for (var i = 0; i < arrNumbers.length; i++) {
 		var times = 0;
-		isUnique = true;
+		var isUnique = true;
 		for (var j = 0; j < arrNumbers.length; j++) {
 			if (arrNumbers[i] === arrNumbers[j]) {
 				times += 1;
