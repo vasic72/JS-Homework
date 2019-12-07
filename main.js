@@ -60,17 +60,14 @@ function findUnique (arrNumbers, secondFunction) {
 	var uniqueArray = [];
 	for (var i = 0; i < arrNumbers.length; i++) {
 		var times = 0;
-		var isUnique = true;
 		for (var j = 0; j < arrNumbers.length; j++) {
 			if (arrNumbers[i] === arrNumbers[j]) {
 				times += 1;
 			};
 		};
-		if (times > 1) {
-			isUnique = false;
-		} else {
+		if (times === 1) {
 			uniqueArray[uniqueArray.length] = arrNumbers[i];
-		  };
+		};
 	};
 	console.log("Unique numbers: ");
 	console.log(uniqueArray);
