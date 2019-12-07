@@ -46,10 +46,10 @@ makeProduct (findLowest(firstArray), findHighest(secondArray));
 // Array should be:
 // [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64]
 // After array is received you should find all numbers from array which are unique,
-//and create a new array out of them.
+// and create a new array out of them.
 // Then, the second function that is passed in the first one should be called,
-//and it should receive this new array we created.
-//It should then delete the biggest number in the array, and console log the result (array).
+// and it should receive this new array we created.
+// It should then delete the biggest number in the array, and console log the result (array).
 
 var initialArray = [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64];
 console.log("TASK 7");
