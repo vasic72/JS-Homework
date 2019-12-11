@@ -130,3 +130,56 @@ function repack (students) {
 };
 
 repack (students);
+
+// TASK 5:
+// Based on existing object:
+// Create the other object which should inherit data from existing object.
+// Then console.log age by accessing the newly created object.
+
+console.log("Task 5");
+var person = {
+	name: "Jack",
+	age: 32,
+	married: true
+};
+console.log("Initial object - Person:");
+console.log(person);
+
+var newPerson = Object.create(person);
+newPerson.age = person.age;
+
+console.log("Second object - age:");
+console.log(newPerson.age);
+
+
+// Task 6
+// Based on existing object:
+// Create a method which, when called, should console.log name and age of existing object.
+console.log("Task 6");
+var person = {
+	name: "Mike",
+	age: 28,
+	married: true,
+	print : function (name, age) {
+		console.log(this.name);
+		console.log(this.age);
+	}
+}
+console.log(person);
+person.print(person.name, person.age);
+
+// TASK 7:
+// Based on existing object:
+// Create a method which should create name, age and married properties
+// in existing object,based on parameters passed in method.
+
+console.log("Task 7");
+var person = {
+	createData : function (name, age, married) {
+		this.name = name;
+		this.age = age;
+		this.married = married;
+	}
+};
+person.createData("Tom", 55, true);
+console.log(person);
