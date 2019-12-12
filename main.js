@@ -1,185 +1,174 @@
-// TASK 1:
-// Based on existing object:
-// Create a function which should change age to 34, and delete married property. In the end console.log object.
+// OBJECTS HOMEWORK 2
+
+// TASK 1
+console.log("TASK 1");
+var oneArray = [0, 1, 2];
+var count = 1;
+for (var i  = 0; i < oneArray.length; i++) {
+	for (var j  = 0; j < oneArray.length; j++) {
+		console.log("At position " + i + ", subposition " + j + ", value is " + count);
+		count += 1;
+	};
+};
+
+console.log();
+console.log("TASK 2");
+
+// TASK 2
+function printNameAge (name, age) {
+	console.log (name, age);
+};
+
+var arr = [
+	{
+		name : "Bob",
+		age : 23
+	},
+	{
+		name : "Tom",
+		age : 44
+	},
+	{
+		name : "Jin",
+		age : 77
+	}
+];
+
+for (var i = 0; i < arr.length; i++) {
+	printNameAge (arr[i].name, arr[i].age);
+};
+
+// PRACTISING
+
+console.log();
+console.log("PRACTISING");
+console.log();
+
+// TASK 1
 
 console.log("TASK 1");
-var person = {
-	name: "Mike",
-	age: 28,
-	married: true
-};
-console.log(person);
-function modifyObject (person) {
- 	person.age = 34;
- 	delete person.married;
- 	console.log(person);
-};
-console.log("After invoking function:");
-modifyObject (person);
-
-// TASK 2:
-// Based on existing object:
-// Create a function which should check if person has children property,
-// if not add it. Its value should be array containing two objects with children data.
-// Each object should contain child name, age and gender.
-
-var personTwo = {
-	name: "Jack",
-	age: 32,
-	married: true
+var someData = {
+	name: "Peter",
+	lastName: "Dinklage",
+	status: "married"
 };
 
+function repack (person) {
+	var newPerson = {};
+	newPerson[person.name] = person.name;
+	newPerson[person.lastName] = person.lastName;
+	newPerson[person.status] = person.status;
+
+	return newPerson;
+};
+console.log("Repacked:")
+console.log(repack(someData));
+
+//TASK 2
 console.log("TASK 2");
-console.log(personTwo);
 
-function checkChildren(person, hasChildren) {
-	if (!person.hasOwnProperty(hasChildren)) {
-		person.children = [
-			{
-				name: "Marko",
-				age : 18,
-				gender : "male"
-			},
-			{
-				name: "Milica",
-				age : 8,
-				gender : "female"
-			}
-		];
-	};
-	return person;
-};
-console.log("After invoking function:");
-console.log(checkChildren(personTwo, "children"));
+var someData = [13, 45, 56, [32, 11], 27, [55, 92]];
+console.log(someData);
 
-// TASK 3:
-// Based on existing array of objects:
-// Create a function which should console.log if student passed exam, result should be something like:
-// "Jack passed exam" or "Mike didn't pass exam"
-
-console.log("TASK 3");
-var students = [ 
-   {
-       name: 'Mike',
-       age: 28,
-       passed: false
-   },
-   {
-       name: 'Anna',
-       age: 23,
-       passed: true
-   },
-   {
-       name: 'Jack',
-       age: 32,
-       passed: true
-   },
-];
-console.log(students);
-
-function hasPass (name) {
-	for (var i = 0; i < students.length; i++) {
-		if (students[i].passed) {
-			console.log(students[i].name + " passed exam.");
+function repackArray (arr) {
+	newArray = [];
+	for (var i = 0; i < arr.length; i++) {
+		if ((typeof (arr[i])) === "number") {
+			newArray[newArray.length] = arr[i];
 		} else {
-			console.log(students[i].name + " didn't pass exam.");
+			for (var j = 0; j < arr[i].length; j++) {
+				newArray[newArray.length] = arr[i][j];
+			}
+		}
+	}
+	console.log("All elements in one array: ");
+	console.log(newArray)
+};
+
+repackArray(someData);
+
+// TASK 3
+console.log("TASK 3");
+var someData = [13, 45, 56, [32, 11], 27, [55, 92]];
+console.log(someData);
+
+function receiveArray (arr) {	//[13, 45, 56, [32, 11], 27, [55, 92]];
+	var subArrays = [];			// array of subarrays
+	for (var i = 0; i < arr.length; i++) {		
+		if ((typeof (arr[i])) !== "number") {
+				subArrays[subArrays.length] = arr[i];
+		}
+	};
+	console.log("Array of subarrays:");	
+	console.log(subArrays);	
+	joinSubArrays (subArrays)	// [[32,11], [55, 92]]
+};
+
+function joinSubArrays (subarrays) {  //[[32,11], [55, 92]]
+	var joinedArray = [];
+
+	for (var i = 0; i < subarrays.length; i++) {
+		for (var j = 0; j < subarrays[i].length; j++) {
+			joinedArray[joinedArray.length] = subarrays[i][j];
 		};
 	};
+	console.log("Joined subarrays: ");
+	console.log(joinedArray);
 };
 
-hasPass (students);
+receiveArray (someData);
 
-// TASK 4:
-// Based on existing array of objects:
-// Create a function which should repack existing data into three arrays,
-// names, ages, and passed.
-
-var students = [ 
-   {
-       name: 'Mike',
-       age: 28,
-       passed: false
-   },
-   {
-       name: 'Anna',
-       age: 23,
-       passed: true
-   },
-   {
-       name: 'Jack',
-       age: 32,
-       passed: true
-   },
-];
+//TASK 4
 console.log("TASK 4");
-console.log(students);
-
-function repack (students) {
-	var names = [];
-	var ages = [];
-	var passed = [];
-
-	for (var i = 0; i < students.length; i++) {
-		names[names.length] = students[i].name;
-		ages[ages.length] = students[i].age;
-		passed[passed.length] = students[i].passed;
-	};
-	console.log("Names: " + names);
-	console.log("Ages: " + ages);
-	console.log("Passed: " + passed);
+var someData = {
+	name: "Peter",
+	lastName: "Dinklage",
+	status: "married"
 };
+console.log("Initial object:");
+console.log(someData);
 
-repack (students);
-
-// TASK 5:
-// Based on existing object:
-// Create the other object which should inherit data from existing object.
-// Then console.log age by accessing the newly created object.
-
-console.log("Task 5");
-var person = {
-	name: "Jack",
-	age: 32,
-	married: true
-};
-console.log("Initial object - Person:");
-console.log(person);
-
-var newPerson = Object.create(person);
-newPerson.age = person.age;
-
-console.log("Second object - age:");
-console.log(newPerson.age);
-
-
-// Task 6
-// Based on existing object:
-// Create a method which, when called, should console.log name and age of existing object.
-console.log("Task 6");
-var person = {
-	name: "Mike",
-	age: 28,
-	married: true,
-	print : function (name, age) {
-		console.log(this.name);
-		console.log(this.age);
+function checkName (obj) {
+	if (obj.hasOwnProperty("name")) {
+		removeName(obj);
+	} else {
+		setName(obj);
 	}
+	return obj;
 }
-console.log(person);
-person.print(person.name, person.age);
 
-// TASK 7:
-// Based on existing object:
-// Create a method which should create name, age and married properties
-// in existing object,based on parameters passed in method.
+function removeName (obj) {
+	delete obj.name;
+	return obj; 
+};
 
-console.log("Task 7");
-var person = {
-	createData : function (name, age, married) {
-		this.name = name;
-		this.age = age;
-		this.married = married;
+function setName (obj) {
+	obj.name = "John";
+	return obj;
+};
+console.log("After invoking function 'checkName'");
+console.log(checkName(someData));
+
+//TASK 5
+console.log("TASK 5");
+var someData = {
+	name: "Peter",
+	lastName: "Dinklage",
+	status: "married",
+	checkName : function() {
+		if (this.hasOwnProperty("name")) {
+			this.secondMethod();
+		};
+	},
+	secondMethod : function() {
+		delete this.name;
+		console.log(someData);
+		this.thirdMethod();
+	},
+	thirdMethod : function() {
+		this.name = previousName; // or "Mike"
+		console.log(someData);
 	}
 };
-person.createData("Tom", 55, true);
-console.log(person);
+var previousName = someData.name;
+someData.checkName();
