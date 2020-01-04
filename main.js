@@ -90,3 +90,49 @@ console.log(adding.func(adding.x, adding.y));
 console.log(subtracting);
 console.log(subtracting.func(subtracting.x, subtracting.y));
 
+
+
+console.log("TASK 4 - VERSION 2");
+
+function OperationsVer(num1, num2, operation) {
+ 
+  this.num1 = num1;
+  this.num2 = num2;
+
+  if (operation === mul) {
+  	this.operation = function() {
+  		return this.num1 * this.num2;
+  		}
+  } else
+
+  if (operation === div) {
+  	this.operation = function() {
+  		return this.num1 / this.num2;
+  	}
+  } else
+
+   if (operation === add) {
+  	this.operation = function() {
+  	return this.num1 + this.num2;
+  	}
+  } else
+
+  	this.operation = function(){
+  		return this.num1 - this.num2;
+};
+};
+
+var mul = new OperationsVer(12, 3, mul);
+var div = new OperationsVer(12, 3, div);
+var add = new OperationsVer(12, 3, add);
+var sub = new OperationsVer(12, 3, sub);
+
+console.log(mul);
+console.log(mul.operation(mul.num1, mul.num2));
+console.log(div);
+console.log(div.operation(div.num1, div.num2));
+console.log(add);
+console.log(add.operation(add.num1, add.num2));
+console.log(sub);
+console.log(sub.operation(sub.num1, sub.num2));
+
