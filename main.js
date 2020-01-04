@@ -80,16 +80,12 @@ var subtracting = new Operations(200, 30, sub);
 
 console.log(multiplying);
 console.log(multiplying.func(multiplying.x, multiplying.y));
-
 console.log(dividing);
 console.log(dividing.func(dividing.x, dividing.y));
-
 console.log(adding);
 console.log(adding.func(adding.x, adding.y));
-
 console.log(subtracting);
 console.log(subtracting.func(subtracting.x, subtracting.y));
-
 
 
 console.log("TASK 4 - VERSION 2");
@@ -122,10 +118,10 @@ function OperationsVer(num1, num2, operation) {
 };
 };
 
-var mul = new OperationsVer(12, 3, mul);
-var div = new OperationsVer(12, 3, div);
-var add = new OperationsVer(12, 3, add);
-var sub = new OperationsVer(12, 3, sub);
+var mul = new OperationsVer(2, 3, mul);
+var div = new OperationsVer(48, 4, div);
+var add = new OperationsVer(22, 33, add);
+var sub = new OperationsVer(200, 30, sub);
 
 console.log(mul);
 console.log(mul.operation(mul.num1, mul.num2));
@@ -135,4 +131,3 @@ console.log(add);
 console.log(add.operation(add.num1, add.num2));
 console.log(sub);
 console.log(sub.operation(sub.num1, sub.num2));
-
