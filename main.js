@@ -29,7 +29,9 @@ function Player(name, age, goals, yellowCards) {
 console.log("");
 console.log("TASK 3");
 
-var players = [["Petar Borota", 32, 0, 2], ["Slobodan Santrac", 25, 67, 13], ["Blagoje Marjanovic", 29, 84, 23]];
+var players = [["Petar Borota", 32, 0, 2],
+	       ["Slobodan Santrac", 25, 67, 13],
+	       ["Blagoje Marjanovic", 29, 84, 23]];
 
 function PlayerLoop(player) {
 	this.name = player[0];
