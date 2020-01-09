@@ -50,12 +50,9 @@ console.log("TASK 5");
 
 var givenString = "Piter is an actor.";
 function switchLetters(someString) {
-	var result;
-	result = someString.slice(0,3) +
-			someString.slice(15,16) +
-			someString.slice(4,15) +
-			someString.slice(3,4) +
-			someString.slice(16,18);
+	
+	result = someString.replace("Piter", "Pitor");
+	result = result.replace("actor", "acter");
 	return result;
 };
 console.log(givenString);
@@ -89,6 +86,22 @@ function reorder (arr) {
 console.log("Repacked:");
 console.log (reorder(someData));
 
+// TASK 8
+console.log();
+console.log("TASK 8");
+
+var someData = [334, 233, 212, 199, 154, 122];
+function repack(arr) {
+	var someNewData = [];
+	for (var i = 0; i < arr.length; i++) {
+	someNewData[someNewData.length] = arr[i] - arr[i - 1];
+	}
+	return someNewData;
+};
+
+console.log(someData);
+console.log(repack(someData));
+
 // TASK 9
 console.log();
 console.log("TASK 9");
@@ -116,7 +129,6 @@ return highGradeStudents;
 };
 console.log("students whose average grade is larger than 8.5:");
 console.log(goodStudents(students));
-
 
 
 
