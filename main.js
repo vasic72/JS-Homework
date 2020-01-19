@@ -130,7 +130,7 @@ title.textContent = teamData.teamName;
 title.className = ("title");
 
 document.getElementById("mainTeam").textContent = "MAIN TEAM"; // subheader
-document.getElementById("reserveTeam").textContent = "RESERVE TEAM"; // subheader
+document.getElementById("reserveTeam").textContent = "RESERVE PLAYERS"; // subheader
 
 for (var i = 0; i < 11; i++) { //adding main team
 	var player = document.createElement("article");
