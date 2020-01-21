@@ -5,7 +5,7 @@ function slide() {
 	document.querySelector("img").setAttribute("src", imgPaths[0]);
 
 	var x = document.querySelectorAll(".thumbs img");
-	index = imgPaths[0][4] - 1;
+	var index = imgPaths[0][4] - 1;
 
 	x.forEach(function(item){
 		item.classList.remove("focus");
