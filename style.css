@@ -1,0 +1,30 @@
+body {
+	background-color: #333;
+}
+
+h1 {
+	color: #ccc;
+}
+
+#main {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.thumbs {
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.thumbs img {
+	max-width: 116px;
+
+  border-radius: 4px;
+
+}
+
+.focus {
+	  border: 3px solid #ccc;
+}

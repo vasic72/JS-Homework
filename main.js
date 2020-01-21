@@ -1,14 +1,17 @@
-var Peter = 3500;
-var Jim = 5000;
-console.log(Peter > Jim);
+var imgPaths = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
 
-var John = 38;
-var Mike = ((38 + 8)/2)-8;
-console.log("Mike is " + Mike + " years old.");
+function slide() {
+	imgPaths.push(imgPaths.shift());
+	document.querySelector("img").setAttribute("src", imgPaths[0]);
 
-var firstFlock = 78;
-var secondFlock = 57;
-firstFlock -= 12;
-secondFlock += 12;
-secondFlock -= 4;
-console.log(firstFlock >= secondFlock);
+	var x = document.querySelectorAll(".thumbs img");
+	index = imgPaths[0][4] - 1;
+
+	x.forEach(function(item){
+		item.classList.remove("focus");
+	});
+	
+	x[index].className = "focus";
+};
+
+setInterval(slide, 2000);
