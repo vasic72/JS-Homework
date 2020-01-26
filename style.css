@@ -1,0 +1,57 @@
+p.bonus {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	color: red;
+	padding-left: 30px;
+}
+
+h1 {
+	color: blue;
+}
+
+.slika {
+	max-height: 250px;
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.rem {
+	position: relative;
+	top: -307px;
+	left: 9px;
+}
+
+.header {
+	width: 60%;
+	height: 100px;
+	margin: 0 auto;
+	background-color: gray;
+	color: white;
+	text-align: center;
+	padding-top: 30px;
+
+}
+
+.posters {
+	width: 60%;
+	margin: 0 auto;
+}
+
+div h3 {
+	margin-top: 5px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 16px;
+	font-family: helvetica;
+	color: #555;
+}
+
+div.list {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+  	margin: 0 auto;
+  	flex-wrap: wrap;
+}
