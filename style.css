@@ -1,0 +1,27 @@
+body {
+	font-family: helvetica;
+}
+
+.header {
+	width: 60%;
+	height: 100px;
+	margin: 0 auto;
+	background-color: gray;
+	color: white;
+	text-align: center;
+	padding-top: 30px;
+
+}
+
+.image {
+	width: 60%;
+	margin: 0 auto;
+
+	text-align: center;
+}
+
+img {
+	max-width: 60%;
+}
+
+
