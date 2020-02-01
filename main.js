@@ -1,11 +1,14 @@
 
 var strSearch = 'akita';
 getData();
+var x = setInterval(getData, 3000);
 
 var inp = document.querySelector("select");
 inp.addEventListener("change", function(e){
 	strSearch = e.target.value;
+	clearInterval(x);
 	getData();
+	x = setInterval(getData, 3000);
 });
 
 function getData(){
@@ -19,8 +22,6 @@ newRequest.onload = function(){
 	document.getElementById('p').textContent = 'Random image of ' + strSearch;
 	};
 };
-
-setInterval(getData, 5000);
 
 
 
