@@ -1,0 +1,80 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #eee;
+}
+
+header {
+	background: #fff;
+	padding: 10px;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+
+}
+.main-wrapper {
+	width: 60%;
+	max-width: 1200px;
+	margin: 0 auto;
+	
+}
+
+.video-preview {
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+h3, img {
+	cursor: pointer;
+}
+
+header .main-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.inline {
+	display: flex;
+	justify-content: flex-start;
+	margin: 10px;
+
+}
+
+.inline div {
+	padding: 20px;
+}
+
+.inline img {
+	max-width: 320px;
+	min-width: 320px;
+	max-height: 190px;
+	min-height: 190px;
+}
+
+input {
+	width: 350px;
+	height: 24px;
+}
+
+.search input {
+	width: 350px;
+	height: 24px;
+	padding: 5px
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.search button {
+	background: red;
+	color: white;
+	height: 30px;
+	text-transform: uppercase;
+	outline: none;;
+}
+
+header .logo img {
+	width: 100px;
+}
