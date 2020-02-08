@@ -1,0 +1,21 @@
+@mixin header() {
+  width: 60%;
+  color: $headerColor;
+  position: absolute;
+  margin: 0 auto;
+  left: 20%;
+}
+
+@mixin divs() {
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+};
+
+@mixin circles($w, $h) {
+  width: $w;
+  height: $h;
+  border: solid 2px #dddddd;
+  border-radius: 50%;
+  line-height: 150px;
+}

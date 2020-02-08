@@ -1,11 +1,168 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JS Homework 01</title>
-	<meta charset="UTF-8">
-	<script type="text/javascript" src="main.js"></script>
+	<title>CSS Project</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<h1>Open console to see logs, please.</h1>
+	<header>
+		<div class="header">
+			<img src="img/main-banner.jpg">
+			<div class="header-text">
+				<h4>Tanatos<span class="orange">Studio</span></h4>
+				<div>
+					<span style="font-size: 12px">Menu</span>&nbsp;&nbsp; 
+					<img class="menu-icon" src="img/menu-icon.png">
+				</div>
+			</div>
+			<div class="logo-text">
+			<h1>WE DESIGN <span class="orange"> THINGS</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br> sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. 
+			</div>
+
+			<div class="header-btn">
+				<button>HIRE US</button>
+				<button>OUR WORKS</button>
+			</div>
+			<div class="arrow-down">
+			<img src="img/arrow-down.png">
+			</div>
+		</div>		
+	</header>
+	<div class="first">
+		<article>
+			<div class="circle">
+				<img src="img/print-icon.png">
+			</div>
+			<h5>PRINT DESIGN</h5>
+			<p class="small">Lorem orem ipsum dolor sit amet, consectetur adipisicing elit ipsum dolor sit</p>	
+		</article>
+		<article>
+			<div class="circle">
+				<img src="img/web-icon.png">
+			</div>
+			<h5>WEB DESIGN</h5>
+			<p class="small">Lorem orem ipsum dolor sit amet, consectetur adipisicing elit ipsum dolor sit</p>	
+		</article>
+		<article>
+			<div class="circle">
+				<img src="img/app-icon.png">
+			</div>
+			<h5>APP DESIGN</h5>
+			<p class="small">Lorem orem ipsum dolor sit amet, consectetur adipisicing elit ipsum dolor sit</p>
+		</article>
+		<article>
+			<div class="circle">
+				<img src="img/logo-icon.png">
+			</div>
+			<h5>LOGO DESIGN</h5>
+			<p class="small">Lorem orem ipsum dolor sit amet, consectetur adipisicing elit ipsum dolor sit</p>		
+		</article>
+	</div>
+
+	<div class="second">
+		
+		<div class="email">
+			<div style="width: 60%">	
+			<form action="#" method="POST">
+			<input type="email" name="email" value="Enter Your email address for newsletter">
+			</form>
+			</div>
+			<div class="email2">
+			<form action="#" method="POST">
+			<input type="button" class="btn" value="SUBSCRIBE" style="cursor: pointer;">
+			</form>
+			</div>
+		</div>		
+	</div>
+	<div class="third">
+		<h2>OUR <span class="orange"> WORKS</span></h2>
+		<p class="small">Lorem orem ipsum dolor sit amet, consectetur <br>adipisicing elit ipsum dolor sit</p>
+		<div class="works">
+			<img src="img/portfolio-1.png">
+			<img src="img/portfolio-2.png">	
+			<img src="img/portfolio-3.png">	
+			<img src="img/portfolio-4.png">
+			<img src="img/portfolio-5.png">	
+			<img src="img/portfolio-6.png">			
+		</div>
+		<button class="btn2">SHOW MORE</button>
+	</div>
+
+	<div class="fourth">
+		<img src="img/testimonials-avatar.png">
+		<div class="arrows">
+			<img src="img/arrow-left.png">
+			<img src="img/arrow-right.png">
+		</div>
+		<p>These guys are incredible! I got my project in 10 days, and it was awesome!<br>
+		Very good service! Higky recomended!
+		</p>
+		<p style="font-style: normal; font-size:13px; padding-bottom: 50px;">
+			John Smith
+		</p>
+	</div>
+
+	<div class="fifth">
+		<h2>OUR <span class="orange"> TEAM</span></h2>
+		<p class="small">Lorem orem ipsum dolor sit amet, consectetur <br>adipisicing elit ipsum dolor sit</p>
+		<div class="fifth-article">
+			<article>
+				<img src="img/team-1.png">
+				<p class="team">CATHERINA GAIL</p>
+				<img id="social" src="img/social.png">
+				<p class="small">Lorem orem ipsum dolor sit amet, <br>consectetur adipisicing elit</p>
+			</article>
+			<article>
+				<img src="img/team-2.png" style="width: 98%; padding-top: 0px; border-bottom: solid 4px #f9610e; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
+				<p class="team">HARVEY RUBE</p>
+				<img id="social" src="img/social.png">
+				<p class="small">Lorem orem ipsum dolor sit amet, <br>consectetur adipisicing elit</p>
+			</article>
+			<article>
+				<img src="img/team-3.png">
+				<p class="team">JANET PIRS</p>	
+				<img id="social" src="img/social.png">
+				<p class="small">Lorem orem ipsum dolor sit amet, <br>consectetur adipisicing elit</p>
+			</article>
+			<article>
+				<img src="img/team-4.png">	
+				<p class="team">KEVIN WARD</p>
+				<img id="social" src="img/social.png">	
+				<p class="small">Lorem orem ipsum dolor sit amet, <br>consectetur adipisicing elit</p>
+			</article>
+		</div>
+		<img src="img/dots.png" style="width: 10%; margin-bottom: 50px;">
+	</div>
+	<div class="sixth">
+		<h2>SAY <span class="orange"> HELLO</span></h2>
+		<p>Lorem orem ipsum dolor sit amet, consectetur <br>adipisicing elit ipsum dolor sit</p>
+		<form action="#" method="POST">
+			<div class="sixth-form">
+				<input type="email" name="email" value="Your email">
+				<input type="text" name="subject" value="Subject">
+			</div>
+			<div class="sixth-form">
+				<textarea>Your message</textarea> 
+			</div>
+			<div class="sixth-form">
+					<div style="width: 50%;text-align: left;">
+						<button style="height: 35px;width: 130px;">HIRE US</button>	
+					</div>
+					<div style="text-align: right; width: 50%">
+						<img src="img/social-icons.png" style="width: 180px;margin-right: 10px; cursor: pointer;">
+					</div>
+			</div>
+		</form>
+	</div>
+	<div class="last">
+		<p>2015 COPYRIGHT DESIGN STUDIO</p>
+	</div>
 </body>
 </html>
