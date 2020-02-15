@@ -1,0 +1,53 @@
+
+.banner {
+  width: 100%;
+  top: 0;
+  left: 0px;
+  z-index: 1;
+}
+
+.logo {
+  position: absolute;
+  width: 30%;
+  display: inline-block;
+  z-index: 99;
+}
+
+
+.title {
+	top: 200px;
+	text-align: center;
+	color: #408bca;
+	font-size: 54px;
+}
+
+main {
+
+	width: 80%;
+	margin: auto;
+}
+div.main div.reserve {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+/*  justify-content: space-between;*/
+
+}
+
+img.article {
+  width: 50%;
+}
+
+article {
+  max-width: 20%;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+h3 {
+	color: #408bca;
+	margin: 0px;
+}
