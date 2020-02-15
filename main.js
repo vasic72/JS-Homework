@@ -107,9 +107,22 @@ bench[bench.length] = allPlayers[random];
 allPlayers.splice(random, 1); // removing reserve from allPlayers
 ;}
 
-bench.sort();
-console.log(allPlayers);
-console.log(bench);
+// if (localStorage.hasOwnProperty("firstSquad")) {
+// 		allPlayers = localStorage.getItem("firstSquad");
+// 		bench = localStorage.getItem("bench");
+// 	} else {
+// 		localStorage.setItem("firstSquad", allPlayers);
+// 		localStorage.setItem("bench", bench);
+// };
+
+// 	console.log("MAIN");
+// for (var i = 0; i < allPlayers.length; i++) {
+// 	console.log(allPlayers[i] + 1, teamData.players[allPlayers[i]].name);
+// };
+// 	console.log("RESERVE");
+// for (var i = 0; i < bench.length; i++) {
+// 	console.log(bench[i] + 1, teamData.players[bench[i]].name);
+// };
 
 var banner = document.createElement("img"); // adding banner
 var header = document.querySelector("header");
@@ -136,6 +149,7 @@ for (var i = 0; i < 11; i++) { //adding main team
 	var player = document.createElement("article");
 	var  main = document.querySelector("div.main");
 	main.appendChild(player);
+	player.className = ("m" + i);
 
 	var index = allPlayers[i];
 
@@ -152,6 +166,8 @@ for (var i = 0; i < 4; i++) { //adding reserve
 	var player = document.createElement("article");
 	var  main = document.querySelector("div.reserve");
 	main.appendChild(player);
+	player.className = ("r" + i);
+
 
 	var index = bench[i];
 
@@ -162,3 +178,35 @@ for (var i = 0; i < 4; i++) { //adding reserve
 	"<br> Age: " + teamData.players[index].age;
 };
 
+function change() {
+	var fromMain = Math.floor(Math.random() * 11);
+	var fromReserve = Math.floor(Math.random() * 4);
+	// console.log("CHANGE");
+	// console.log(allPlayers[fromMain] + 1, teamData.players[allPlayers[fromMain]].name);
+	// console.log(bench[fromReserve] + 1, teamData.players[bench[fromReserve]].name);
+
+	var temp = allPlayers[fromMain];
+	allPlayers[fromMain] = bench[fromReserve];
+	bench[fromReserve] = temp;
+
+	var toResClass = "m" + fromMain
+	var toRes = document.querySelector("." + toResClass);
+
+	var toMainClass = "r" + fromReserve
+	var toMain = document.querySelector("." + toMainClass);
+
+	var tempSubst = toRes.innerHTML;
+	toRes.innerHTML = toMain.innerHTML;
+	toMain.innerHTML = tempSubst;
+};
+
+setInterval(change, 3000);
+
+	// console.log("MAIN");
+	// for (var i = 0; i < allPlayers.length; i++) {
+	// 	console.log(allPlayers[i] + 1, teamData.players[allPlayers[i]].name);
+	// };
+	// console.log("RESERVE");
+	// for (var i = 0; i < bench.length; i++) {
+	// 	console.log(bench[i] + 1, teamData.players[bench[i]].name);
+	// };
