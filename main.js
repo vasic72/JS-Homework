@@ -67,8 +67,16 @@ for (let i = 0; i < 4; i++) { //adding reserve
 };
 
 let change = ()  => {
+	let fromReserve;
 	let fromMain = Math.floor(Math.random() * 11);
-	let fromReserve = Math.floor(Math.random() * 4);
+		if  (fromMain === 0) { // check if it is goalkeeper
+			fromReserve = 0 // subst with goalkeeper
+		} else {
+			fromReserve = Math.floor(Math.random() * 4) + 1; // any player except goalkeeper
+		};
+
+		console.log(fromMain, fromReserve)
+	
 	let temp = allPlayers[fromMain];
 	allPlayers[fromMain] = bench[fromReserve];
 	bench[fromReserve] = temp;
