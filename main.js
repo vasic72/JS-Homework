@@ -72,7 +72,7 @@ let change = ()  => {
 		if  (fromMain === 0) { // check if it is goalkeeper
 			fromReserve = 0 // subst with goalkeeper
 		} else {
-			fromReserve = Math.floor(Math.random() * 4) + 1; // any player except goalkeeper
+			fromReserve = Math.floor(Math.random() * 3) + 1; // any player except goalkeeper
 		};
 
 		console.log(fromMain, fromReserve)
